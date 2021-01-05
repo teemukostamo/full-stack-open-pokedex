@@ -35,3 +35,4 @@ jobs:
           heroku_email: teemu.kostamo@hotmail.com
           healthcheck: https://powerful-headland-78075.herokuapp.com/health
           checkstring: 'ok'
+          rollbackonhealthcheckfailed: true
