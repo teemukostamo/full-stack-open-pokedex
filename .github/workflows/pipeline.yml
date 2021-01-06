@@ -52,7 +52,7 @@ jobs:
         uses: 8398a7/action-slack@v3
         with:
           status: custom
-          #          fields: repo,message,commit,author,took
+          fields: repo,commit,author,took
           custom_payload: |
             {
               attachments: [{
