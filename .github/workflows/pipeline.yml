@@ -57,9 +57,10 @@ jobs:
             {
               attachments: [{
                 color: 'good',
-                text: `A new version deployed to ${process.env.AS_REPO} (${process.env.AS_COMMIT}) by ${process.env.AS_AUTHOR} build took ${process.env.AS_TOOK}`,
+                text: `A new version deployed to ${process.env.AS_REPO} (${process.env.AS_COMMIT}) by ${process.env.AS_AUTHOR} build took ${process.env.AS_TOOK}.`,
               }]
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          MATRIX_CONTEXT: ${{ toJson(matrix) }}
         if: ${{ success() }}
